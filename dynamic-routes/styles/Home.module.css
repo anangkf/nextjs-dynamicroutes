@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 .card {
@@ -92,6 +92,8 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  min-height: 380px;
+  transition: 1s ease;
 }
 
 .card:hover,
@@ -99,6 +101,8 @@
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
+  cursor: pointer;
+  transform: scale(1.025);
 }
 
 .card h2 {

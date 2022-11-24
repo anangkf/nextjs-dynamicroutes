@@ -6,11 +6,11 @@ import Image from 'next/image';
 const ListMasakan = (props)=>{
     
     const listMasakan = props.list;
-    // console.log(listMasakan)
+    console.log(listMasakan)
 
     return(
         <div className={styles.grid}>
-          {listMasakan !== null && listMasakan.map(data=>{
+          {listMasakan?.map(data=>{
             return(
               <div className={styles.card} key={data.key}>
 
@@ -25,7 +25,7 @@ const ListMasakan = (props)=>{
                 />
 
                 <Link href={`/detail/${data.key}`} key={data.key} >
-                  <h2>{data.key.replaceAll("-"," ")} &rarr;</h2>
+                  <h2>{data.key.replaceAll("-"," ").slice(0,32)}... &rarr;</h2>
                 </Link>
               </div>
 
